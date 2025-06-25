@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+{% block title %}Excluir Tarefa - Todo List{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-6 mx-auto">
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="h2 mb-0">
+                <i class="bi bi-exclamation-triangle me-2 text-danger"></i>
+                Excluir Tarefa
+            </h1>
+            <a href="{% url 'home' %}" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left me-2"></i>
+                Voltar
+            </a>
+        </div>
+
+        <!-- Warning Card -->
+        <div class="card border-danger shadow-sm">
+            <div class="card-header bg-danger text-white">
+                <h5 class="mb-0">
+                    <i class="bi bi-exclamation-triangle me-2"></i>
+                    Confirmação de Exclusão
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-warning" role="alert">
+                    <i class="bi bi-exclamation-triangle me-2"></i>
+                    <strong>Atenção!</strong> Esta ação não pode ser desfeita.
+                </div>
+
+                <!-- Task Details -->
+                <div class="card bg-light mb-3">
+                    <div class="card-header">
+                        <h6 class="mb-0">
+                            <i class="bi bi-info-circle me-2"></i>
+                            Detalhes da Tarefa
+                        </h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><strong>Título:</strong></p>
+                                <p class="text-muted">{{ todo.title }}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><strong>Status:</strong></p>
+                                <span class="badge bg-{{ todo.status|yesno:'success,warning,danger,secondary' }}">
+                                    {{ todo.get_status_display }}
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><strong>Prioridade:</strong></p>
+                                <span class="badge bg-{{ todo.priority|yesno:'success,warning,danger' }}">
+                                    {{ todo.get_priority_display }}
+                                </span>
+                            </div>
+                            <div class="col-md-6">
+                                <p><strong>Criada em:</strong></p>
+                                <p class="text-muted">{{ todo.created_at|date:"d/m/Y H:i" }}</p>
+                            </div>
+                        </div>
+
+                        {% if todo.description %}
+                            <div class="mt-3">
+                                <p><strong>Descrição:</strong></p>
+                                <p class="text-muted">{{ todo.description }}</p>
+                            </div>
+                        {% endif %}
+
+                        {% if todo.due_date %}
+                            <div class="mt-3">
+                                <p><strong>Data de Vencimento:</strong></p>
+                                <p class="text-muted">{{ todo.due_date|date:"d/m/Y H:i" }}</p>
+                            </div>
+                        {% endif %}
+
+                        {% if todo.completed_at %}
+                            <div class="mt-3">
+                                <p><strong>Concluída em:</strong></p>
+                                <p class="text-muted">{{ todo.completed_at|date:"d/m/Y H:i" }}</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Confirmation Form -->
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-danger btn-lg">
+                            <i class="bi bi-trash me-2"></i>
+                            Confirmar Exclusão
+                        </button>
+                        <a href="{% url 'home' %}" class="btn btn-outline-secondary">
+                            <i class="bi bi-x-circle me-2"></i>
+                            Cancelar
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Additional Info -->
+        <div class="card shadow-sm mt-4">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">
+                    <i class="bi bi-info-circle me-2"></i>
+                    Informações Importantes
+                </h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2">
+                        <i class="bi bi-check-circle text-success me-2"></i>
+                        A exclusão é permanente e não pode ser desfeita
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-check-circle text-success me-2"></i>
+                        Todos os dados da tarefa serão removidos do banco de dados
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-check-circle text-success me-2"></i>
+                        Você pode criar uma nova tarefa similar se necessário
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

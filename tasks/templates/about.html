@@ -1,0 +1,284 @@
+{% extends 'base.html' %}
+
+{% block title %}Sobre o Projeto - Todo List{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-10 mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-5">
+            <h1 class="display-4 mb-3">
+                <i class="bi bi-info-circle text-primary me-3"></i>
+                Sobre o Projeto
+            </h1>
+            <p class="lead text-muted">
+                Um gerenciador de tarefas moderno e funcional desenvolvido com Django e Bootstrap
+            </p>
+        </div>
+
+        <!-- Project Overview -->
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">
+                    <i class="bi bi-lightbulb me-2"></i>
+                    Visão Geral do Projeto
+                </h4>
+            </div>
+            <div class="card-body">
+                <p class="mb-3">
+                    Este projeto é um sistema completo de gerenciamento de tarefas que demonstra o uso prático 
+                    do framework Django para desenvolvimento web. O sistema permite aos usuários criar, editar, 
+                    visualizar e excluir tarefas de forma intuitiva e eficiente.
+                </p>
+                <p class="mb-0">
+                    O projeto foi desenvolvido seguindo as melhores práticas de desenvolvimento web, 
+                    incluindo uma arquitetura MVC (Model-View-Controller), interface responsiva e 
+                    experiência do usuário otimizada.
+                </p>
+            </div>
+        </div>
+
+        <!-- Technologies Used -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0">
+                            <i class="bi bi-gear me-2"></i>
+                            Tecnologias Backend
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                <strong>Django 4.x:</strong> Framework web Python
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                <strong>SQLite:</strong> Banco de dados relacional
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                <strong>Python 3.x:</strong> Linguagem de programação
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                <strong>Django ORM:</strong> Mapeamento objeto-relacional
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0">
+                            <i class="bi bi-palette me-2"></i>
+                            Tecnologias Frontend
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                <strong>Bootstrap 5:</strong> Framework CSS responsivo
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                <strong>Bootstrap Icons:</strong> Biblioteca de ícones
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                <strong>HTML5:</strong> Linguagem de marcação
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                <strong>JavaScript:</strong> Interatividade do cliente
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-warning text-dark">
+                <h4 class="mb-0">
+                    <i class="bi bi-star me-2"></i>
+                    Funcionalidades Implementadas
+                </h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 class="text-primary mb-3">
+                            <i class="bi bi-plus-circle me-2"></i>
+                            Gerenciamento de Tarefas
+                        </h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-check text-success me-2"></i>
+                                Criar novas tarefas com título, descrição e prioridade
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check text-success me-2"></i>
+                                Editar tarefas existentes
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check text-success me-2"></i>
+                                Excluir tarefas com confirmação
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check text-success me-2"></i>
+                                Marcar tarefas como concluídas
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="text-primary mb-3">
+                            <i class="bi bi-gear me-2"></i>
+                            Recursos Avançados
+                        </h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-check text-success me-2"></i>
+                                Sistema de prioridades (Baixa, Média, Alta)
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check text-success me-2"></i>
+                                Status de tarefas (Pendente, Em Progresso, Concluída)
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check text-success me-2"></i>
+                                Data de vencimento para tarefas
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check text-success me-2"></i>
+                                Interface responsiva e moderna
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Django Concepts -->
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-secondary text-white">
+                <h4 class="mb-0">
+                    <i class="bi bi-book me-2"></i>
+                    Conceitos Django Aplicados
+                </h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center mb-3">
+                            <i class="bi bi-database text-primary" style="font-size: 2rem;"></i>
+                        </div>
+                        <h5 class="text-center">Models</h5>
+                        <p class="text-muted text-center">
+                            Definição da estrutura do banco de dados com campos, validações e relacionamentos.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center mb-3">
+                            <i class="bi bi-eye text-primary" style="font-size: 2rem;"></i>
+                        </div>
+                        <h5 class="text-center">Views</h5>
+                        <p class="text-muted text-center">
+                            Lógica de negócio que processa requisições e retorna respostas apropriadas.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center mb-3">
+                            <i class="bi bi-file-text text-primary" style="font-size: 2rem;"></i>
+                        </div>
+                        <h5 class="text-center">Templates</h5>
+                        <p class="text-muted text-center">
+                            Interface do usuário com sistema de templates Django e Bootstrap.
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <div class="text-center mb-3">
+                            <i class="bi bi-link text-primary" style="font-size: 2rem;"></i>
+                        </div>
+                        <h5 class="text-center">URLs</h5>
+                        <p class="text-muted text-center">
+                            Mapeamento de URLs para views específicas do sistema.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center mb-3">
+                            <i class="bi bi-input-cursor text-primary" style="font-size: 2rem;"></i>
+                        </div>
+                        <h5 class="text-center">Forms</h5>
+                        <p class="text-muted text-center">
+                            Formulários Django para validação e processamento de dados.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center mb-3">
+                            <i class="bi bi-arrow-left-right text-primary" style="font-size: 2rem;"></i>
+                        </div>
+                        <h5 class="text-center">HTTP Methods</h5>
+                        <p class="text-muted text-center">
+                            Uso de GET e POST para diferentes operações no sistema.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Development Info -->
+        <div class="card shadow-sm">
+            <div class="card-header bg-dark text-white">
+                <h4 class="mb-0">
+                    <i class="bi bi-code-slash me-2"></i>
+                    Informações de Desenvolvimento
+                </h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 class="text-primary">Estrutura do Projeto</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-folder text-info me-2"></i>
+                                <strong>todolist/</strong> - Configurações principais do Django
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-folder text-info me-2"></i>
+                                <strong>tasks/</strong> - Aplicação principal de tarefas
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-folder text-info me-2"></i>
+                                <strong>templates/</strong> - Templates HTML
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-folder text-info me-2"></i>
+                                <strong>migrations/</strong> - Migrações do banco de dados
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="text-primary">Como Executar</h5>
+                        <div class="bg-light p-3 rounded">
+                            <code>
+                                python manage.py runserver
+                            </code>
+                        </div>
+                        <p class="text-muted mt-2">
+                            Acesse <strong>http://localhost:8000</strong> no seu navegador.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
