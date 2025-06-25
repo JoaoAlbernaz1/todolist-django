@@ -37,48 +37,40 @@ Siga os passos abaixo para executar o projeto em sua máquina.
 ### 1. Clone o Repositório
 
 ```bash
-git clone <url-do-seu-repositorio>
+git clone https://github.com/JoaoAlbernaz1/todolist-django.git
 cd todolist-django
 ```
 
 ### 2. Crie um Ambiente Virtual (Recomendado)
 
+#### **No Windows:**
 ```bash
 python -m venv venv
+venv\Scripts\activate
 ```
 
-- **No Windows:**
-  ```bash
-  .\venv\Scripts\activate
-  ```
-- **No macOS/Linux:**
-  ```bash
-  source venv/bin/activate
-  ```
+#### **No macOS/Linux:**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+> **Observação:** No Windows, use o terminal `cmd` ou `PowerShell`. No PowerShell, talvez precise rodar `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` uma vez antes de ativar o ambiente virtual.
 
 ### 3. Instale as Dependências
 
-Crie um arquivo chamado `requirements.txt` com o seguinte conteúdo:
-
-```
-Django>=4.0
-```
-
-E instale as dependências:
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 4. Aplique as Migrações do Banco de Dados
 
-Este comando cria as tabelas no banco de dados com base nos modelos definidos.
 ```bash
 python manage.py migrate
 ```
 
 ### 5. Crie um Superusuário (Opcional)
 
-Para acessar o painel de admin do Django, crie um superusuário.
 ```bash
 python manage.py createsuperuser
 ```
