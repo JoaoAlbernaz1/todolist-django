@@ -1,0 +1,36 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local Python environments
+.venv/
+venv/
+env/
+
+# Runtime state: keep Django migrations tracked
+db.sqlite3
+db.sqlite3-journal
+*.sqlite3-journal
+media/
+staticfiles/
+
+# Environment files and credentials
+.env
+.env.*
+!.env.example
+
+# IDE and operating system
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Packaging
+build/
+dist/
+*.egg-info/

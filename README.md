@@ -100,4 +100,10 @@ python manage.py runserver
   - `templates/`: Armazena os arquivos HTML da aplicação.
   - `admin.py`: Customiza como as tarefas são exibidas no painel de admin.
 - `db.sqlite3`: O arquivo do banco de dados SQLite.
-- `manage.py`: O utilitário de linha de comando do Django. 
+- `manage.py`: O utilitário de linha de comando do Django.
+
+## Arquivos locais e controle de versão
+
+O arquivo [`.gitignore`](.gitignore) evita adicionar por engano novos caches do Python, bancos SQLite de desenvolvimento, ambientes virtuais e arquivos `.env` com segredos. **As migrações de Django continuam versionadas.**
+
+Observação: o `.gitignore` não retira automaticamente arquivos que já eram rastreados no histórico. Uma limpeza futura desses artefatos exige revisão específica para não eliminar dados de demonstração ou arquivos necessários.
